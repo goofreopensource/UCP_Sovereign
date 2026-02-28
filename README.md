@@ -8,43 +8,44 @@
 
 ---
 
-## 🛠️ The ACO Feature Powerhouse 
-Goofre doesn't just "read" data; it orchestrates action across the entire Google ecosystem using the **Universal Commerce Protocol (UCP)**.
+## 🛠️ Current Build: The ACO Feature Powerhouse
+The following modules are fully integrated into the current codebase, handling the complex **Google 2026 mandates** and **Universal Commerce Protocol (UCP)** requirements out of the box.
 
 ### **1. UCP Foundation & Handshake**
-* **Webhook Gateway:** A functional local-to-cloud gateway (FastAPI to Node.js) that catches `order.completed` events in real-time.
-* **The Switchboard Orchestrator (`orchestrator.ts`):** The central "Brain" that receives UCP events, triggers Google API services, and packages data for Gemini AI analysis.
+* **Local-to-Cloud Webhook Gateway:** A functional FastAPI-to-Node.js gateway that successfully catches `order.completed` events in real-time.
+* **The Switchboard Orchestrator (`orchestrator.ts`):** The central "Brain" that receives UCP events, triggers required Google API services, and packages data for Gemini AI analysis (includes `handleOrderCompleted` and `generateStoreHealthReport`).
 
-### **2. Google Merchant API Connector**
-* **Automated ID Splitter:** Programmatically appends `_LOCAL_[STORECODE]` to physical store orders. This ensures compliance with the **March 2026 Multi-Channel Product ID mandate** without affecting online Product Listing Ads.
+### **2. Google Merchant API Connector (`merchantInventory.ts`)**
 * **Financial Micros Sync:** Uses the v1 Merchant API to sync inventory and prices with high-precision financial micros.
+* **Automated ID Splitter:** Programmatically appends `_LOCAL_[STORECODE]` to physical store orders. This ensures compliance with the **March 2026 Multi-Channel Product ID mandate** without affecting online Product Listing Ads.
 
-### **3. Semantic Richness Extension**
-* **AI-Ready Metadata:** Beyond basic transaction data, Goofre includes structured fields for **Warranties**, **Material Claims**, and **Compatibility**.
-* **Deterministic Answers:** Enables agents to answer specific user queries (e.g., *"Does this fit my 2022 GMC Terrain?"*) with 100% accuracy rather than LLM "hallucinations."
+### **3. Google Search Console Service (`searchConsole.ts`)**
+* **Hourly Visibility Monitoring:** Utilizes the **2026 Hourly Data API** to monitor organic visibility.
+* **Indexing Verification:** Inspects specific product URLs to verify if Google's crawler has correctly indexed "Out of Stock" status or price changes.
 
-### **4. GTIN Health & Search Console Service**
-* **The GTIN Fix:** Includes a "GTIN Health Check" to solve the **"GTIN Needed Paradox"** for small brands, automatically verifying the `identifier_exists` attribute.
-* **Hourly Visibility Monitoring:** Uses the 2026 Hourly Data API to monitor organic visibility and verify Google crawler indexing for price or stock changes.
+### **4. GA4 Predictive Analytics Service (`analyticsService.ts`)**
+* **ML Metric Abstraction:** Pulls `churnProbability` and `purchaseProbability` to flag at-risk cohorts.
+* **90-Day Retention Tracking:** Automatically monitors the **90-day Repeat Purchase Rate**, a foundational requirement for 2026 visibility.
 
-### **5. Reverse Logistics & Predictive Analytics**
-* **Unified Returns:** Native UCP support for returns (`dev.ucp.shopping.returns`) allowing AI agents to manage the 15.8% average return rate without human intervention.
-*
+### **5. The "Goofre Fix" Suite**
+* **GTIN Health Check:** Scans for the **"GTIN Needed Paradox"** in small brands. It verifies the `identifier_exists` attribute mapping, saving developers hours of debugging platform mapping errors.
+* **Semantic Richness Extension:** Includes structured metadata fields for **Warranties**, **Material Claims**, and **Compatibility**. This provides deterministic answers for AI agents (e.g., *"Does this fit my 2022 GMC Terrain?"*).
+* **Reverse Logistics Engine:** Native support for `dev.ucp.shopping.returns` capability, allowing AI interfaces to manage the 15.8% average return rate without human intervention.
+
 ---
 
 ## 📂 Project Architecture
 
 ```plaintext
 Goofre_ACO_App/
-├── ucp-engine/           # The "Brain": Webhook gateway and UCP Handshake
+├── ucp-engine/           # Webhook gateway and UCP Handshake logic
 ├── orchestrator/         # Switchboard Orchestrator (orchestrator.ts)
-├── integrations/         # Google Merchant (v1), GSC (Hourly), and GA4 Services
-├── agents-sdk/           # Semantic Richness extensions for AI Agents
+├── integrations/         # merchantInventory.ts, searchConsole.ts, analyticsService.ts
+├── agents-sdk/           # Semantic Richness & Manifest Generator
 └── dashboard-lite/       # Next.js SaaS interface & Transaction Ledger
-
-📦 Module Breakdown
+📦 Available Modules
 The Open-Source Module (Infrastructure)
-The MIT-licensed Node.js and FastAPI backend stack designed for developers to fork and deploy. It handles the complex Google 2026 mandates and UCP webhooks out of the box.
+The MIT-licensed Node.js and FastAPI backend stack designed for developers to fork and deploy. It handles the plumbing for UCP webhooks and Google API authentication.
 
 The Lite SaaS Module (Orchestration UI)
 A high-performance Next.js dashboard providing:
@@ -56,9 +57,8 @@ Transaction Ledger: A unified log of every purchase and orchestration event.
 Agentic Insights: A scrolling feed of autonomous actions taken by the ACO.
 
 🛣️ The Path Forward: Agentic vs. Automatic
-Legacy platforms are using AI to replace the developer. Their goal is "No-Code" automation. Goofre takes the opposite path. We believe the future is a High-Code Agentic Ecosystem where the developer is the Architect.
+Legacy e-commerce platforms are using AI to replace the developer. Their goal is "No-Code" automation. Goofre takes the opposite path. We believe the future is a High-Code Agentic Ecosystem where the developer is the Architect.
 
 The Legacy Path: AI replaces the developer to build a static silo.
 
 The Goofre Path: The developer uses the ACO to orchestrate the world’s most powerful commerce stack.
-
