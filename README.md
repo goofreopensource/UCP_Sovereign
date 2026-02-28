@@ -1,62 +1,32 @@
-Markdown
-# 🚀 Goofre: The Agentic Commerce Orchestrator
-### *Turn the Google Stack into your Sovereign E-commerce Engine*
+# 🚀 Goofre: The Agentic Commerce Orchestrator (ACO)
+### **Orchestrating the Google Stack via Unified Context (UCP)**
 
 ---
 
 ## 💡 The 2-Line Impact
-**Goofre** is a developer-centric **Unified Context Platform (UCP)** that orchestrates the fragmented Google ecosystem (GMC, GBP, Gads, GA) into a single, agent-ready commerce layer. It empowers agencies to build autonomous, hyper-personalized shopping experiences without being locked into legacy, monolithic e-commerce platforms.
+**Goofre** is a developer-centric **Agentic Commerce Orchestrator (ACO)** built on a foundation of Unified Context. It transforms fragmented Google APIs (GMC, GBP, GSC, GA) into a single, autonomous commerce layer, allowing agencies to build hyper-personalized shopping experiences without legacy platform lock-in.
 
 ---
 
-## 📈 The State of Commerce (Feb 2026)
-The **"Storefront Era"** is ending. We are moving into **Agentic Commerce**, where AI agents negotiate, discover, and purchase on behalf of users.
+## 🛠️ The ACO Feature Powerhouse (2026 Roadmap)
+Goofre doesn't just "read" data; it orchestrates action across the entire Google ecosystem using the **Universal Commerce Protocol (UCP)**.
 
-* **Agentic Growth:** As of Q1 2026, **32% of all digital commerce transactions** are now initiated or completed by autonomous AI agents (up from 12% in 2024).
-* **The Pivot:** **85% of major e-commerce platforms** have launched "Agent-First" APIs to automate store management, yet they remain siloed.
-* **The Opportunity:** Development agencies are shifting from "Store Builders" to **"Context Orchestrators."**
+### **1. UCP Foundation & Handshake**
+* **Webhook Gateway:** A functional local-to-cloud gateway (FastAPI to Node.js) that catches `order.completed` events in real-time.
+* **The Switchboard Orchestrator (`orchestrator.ts`):** The central "Brain" that receives UCP events, triggers Google API services, and packages data for Gemini AI analysis.
 
-### 🌍 The Power of the Google Stack (2026 Context)
-Google remains the undisputed backbone of commerce data. By the numbers:
+### **2. Google Merchant API Connector**
+* **Automated ID Splitter:** Programmatically appends `_LOCAL_[STORECODE]` to physical store orders. This ensures compliance with the **March 2026 Multi-Channel Product ID mandate** without affecting online Product Listing Ads.
+* **Financial Micros Sync:** Uses the v1 Merchant API to sync inventory and prices with high-precision financial micros.
 
-* **Google Merchant Center (GMC):** Over **45 million active merchants** globally, feeding the world’s largest real-time product graph.
-* **Google Business Profile (GBP):** Drives **$1.2 Trillion** in annual "near me" local commerce.
-* **Google Ads & Shopping:** Commands **58% of all retail search spend**, generating over **$250B** in annual ad-driven revenue.
+### **3. Semantic Richness Extension**
+* **AI-Ready Metadata:** Beyond basic transaction data, Goofre includes structured fields for **Warranties**, **Material Claims**, and **Compatibility**.
+* **Deterministic Answers:** Enables agents to answer specific user queries (e.g., *"Does this fit my 2022 GMC Terrain?"*) with 100% accuracy rather than LLM "hallucinations."
 
-> **The Gap:** While these tools are connected, they are not **unified**. They were built for humans to manage via dashboards, not for **Agents** to orchestrate via **Context**.
+### **4. GTIN Health & Search Console Service**
+* **The GTIN Fix:** Includes a "GTIN Health Check" to solve the **"GTIN Needed Paradox"** for small brands, automatically verifying the `identifier_exists` attribute.
+* **Hourly Visibility Monitoring:** Uses the 2026 Hourly Data API to monitor organic visibility and verify Google crawler indexing for price or stock changes.
 
----
-
-## 🛠️ Why Goofre?
-Google provides the infrastructure; **Goofre provides the Intelligence Layer.** We bridge the gap between Google’s massive data silos and the Agentic future.
-
-### ✨ Unique Features (UCP + Google Powerhouse)
-
-* **⚡ Unified Merchant Context (UMC):** Goofre flattens data from GMC (products), GSC (intent), and GA (behavior) into a single UCP schema. Agents don't just see "inventory"; they understand **velocity-adjusted demand.**
-* **🤖 Agentic Orchestration Engine:** A built-in middleware that allows AI agents to trigger actions across the stack—adjusting Gads bids based on real-time inventory or updating GBP store hours via automated local intent signals.
-* **🔍 Search-to-Conversion Loop:** Leverages GSC (Search Console) data to feed the UCP, allowing your agents to know exactly what keywords led to a sale, automatically optimizing the GMC product feed for those specific high-intent queries.
-* **🛡️ Sovereign Identity Layer:** Unlike traditional platforms that own the customer data, Goofre’s UCP keeps the identity layer with the merchant or the user, using Google’s secure auth infra to bridge the trust gap.
-* **📈 Cross-Stack Analytics Synthesis:** Aggregates GA4 events with Google Ads performance into a **"Context Stream,"** allowing agents to make "Vibe-Coding" level adjustments to the storefront appearance based on the user's current referral path.
-
----
-
-## 📂 Project Architecture
-
-```plaintext
-Goofre_UCP_App/
-├── core-ucp/             # The "Brain": Maps Google API data to Unified Context
-├── agents-sdk/           # Tools for developers to build Google-stack aware agents
-├── integrations/         # Deep hooks for GMC, GBP, GSC, GA, Gads
-└── dashboard/            # Next.js interface for agency-level orchestration
-🛣️ The Path Forward: Agentic vs. Automatic
-Legacy e-commerce platforms are rushing to add AI as a "feature." Their goal is clear: full automation to the point where the developer becomes obsolete. In their vision, a merchant clicks a button, and a generic AI builds a generic store.
-
-If you are a developer or an agency, these platforms are building your "exit strategy" for you.
-
-Goofre takes the opposite path. We believe that the future isn't a "no-code" storefront; it's a High-Code Agentic Ecosystem.
-
-The Legacy Path: AI replaces the developer to build a static silo.
-
-The Goofre Path: The developer uses UCP to orchestrate a fleet of agents across the world’s most powerful commerce stack (Google).
-
-By using Goofre, you aren't just building a website; you are building the Context Engine that powers a brand's entire digital existence across Search, Maps, Shopping, and Ads.
+### **5. Reverse Logistics & Predictive Analytics**
+* **Unified Returns:** Native UCP support for returns (`dev.ucp.shopping.returns`) allowing AI agents to manage the 15.8% average return rate without human intervention.
+*
