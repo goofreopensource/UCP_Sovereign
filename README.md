@@ -8,7 +8,7 @@
 
 ---
 
-## 🛠️ The ACO Feature Powerhouse (2026 Roadmap)
+## 🛠️ The ACO Feature Powerhouse 
 Goofre doesn't just "read" data; it orchestrates action across the entire Google ecosystem using the **Universal Commerce Protocol (UCP)**.
 
 ### **1. UCP Foundation & Handshake**
@@ -30,3 +30,39 @@ Goofre doesn't just "read" data; it orchestrates action across the entire Google
 ### **5. Reverse Logistics & Predictive Analytics**
 * **Unified Returns:** Native UCP support for returns (`dev.ucp.shopping.returns`) allowing AI agents to manage the 15.8% average return rate without human intervention.
 *
+---
+
+## 📂 Project Architecture
+
+```plaintext
+Goofre_ACO_App/
+├── ucp-engine/           # The "Brain": Webhook gateway and UCP Handshake
+├── orchestrator/         # Switchboard Orchestrator (orchestrator.ts)
+├── integrations/         # Google Merchant (v1), GSC (Hourly), and GA4 Services
+├── agents-sdk/           # Semantic Richness extensions for AI Agents
+└── dashboard-lite/       # Next.js SaaS interface & Transaction Ledger
+📦 Module Breakdown
+The Open-Source Module (Infrastructure)
+The MIT-licensed Node.js and FastAPI backend stack designed for developers to fork and deploy. It handles the complex Google 2026 mandates and UCP webhooks out of the box.
+
+The Lite SaaS Module (Orchestration UI)
+A high-performance Next.js dashboard providing:
+
+System Status: Real-time "Traffic Light" health check of the Google Stack.
+
+Transaction Ledger: A unified log of every purchase and orchestration event.
+
+Agentic Insights: A scrolling feed of autonomous actions taken by the ACO.
+
+🛣️ The Path Forward: Agentic vs. Automatic
+Legacy platforms are using AI to replace the developer. Their goal is "No-Code" automation. Goofre takes the opposite path. We believe the future is a High-Code Agentic Ecosystem where the developer is the Architect.
+
+The Legacy Path: AI replaces the developer to build a static silo.
+
+The Goofre Path: The developer uses the ACO to orchestrate the world’s most powerful commerce stack.
+
+
+### **Product Manager's Note:**
+I have specifically included the **"GTIN Health Check"** and the **"Multi-Channel ID Mandate"** logic. These are high-value "pain points" for e-commerce developers that will make them choose Goofre over a standard Google API wrapper. 
+
+**Shall we move on to drafting the `CONTRIBUTING.md` to define how other developers can help build out these specific 2026 modules?**
