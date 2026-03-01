@@ -1,14 +1,14 @@
-# 🚀 Goofre: The Agentic Commerce Orchestrator (ACO)
+#  Goofre: The Agentic Commerce Orchestrator (ACO)
 ### **Orchestrating the Google Stack via Unified Context (UCP)**
 
 ---
 
-## 💡 The 2-Line Impact
+##  The 2-Line Impact
 **Goofre** is a developer-centric **Agentic Commerce Orchestrator (ACO)** built on a foundation of Unified Context. It transforms fragmented Google APIs (GMC, GBP, GSC, GA) into a single, autonomous commerce layer, allowing agencies to build hyper-personalized shopping experiences without legacy platform lock-in.
 
 ---
 
-## 🛠️ Current Build: The ACO Feature Powerhouse
+##  Current Build: The ACO Feature Powerhouse
 The following modules are fully integrated into the current codebase, handling the complex **Google 2026 mandates** and **Universal Commerce Protocol (UCP)** requirements out of the box.
 
 ### **1. UCP Foundation & Handshake**
@@ -43,7 +43,8 @@ Goofre_ACO_App/
 ├── integrations/         # merchantInventory.ts, searchConsole.ts, analyticsService.ts
 ├── agents-sdk/           # Semantic Richness & Manifest Generator
 └── dashboard-lite/       # Next.js SaaS interface & Transaction Ledger
-📦 Available Modules
+
+Available Modules
 The Open-Source Module (Infrastructure)
 The MIT-licensed Node.js and FastAPI backend stack designed for developers to fork and deploy. It handles the plumbing for UCP webhooks and Google API authentication.
 
@@ -56,7 +57,7 @@ Transaction Ledger: A unified log of every purchase and orchestration event.
 
 Agentic Insights: A scrolling feed of autonomous actions taken by the ACO.
 
-🛣️ The Path Forward: Agentic vs. Automatic
+The Path Forward: Agentic vs. Automatic
 Legacy e-commerce platforms are using AI to replace the developer. Their goal is "No-Code" automation. Goofre takes the opposite path. We believe the future is a High-Code Agentic Ecosystem where the developer is the Architect.
 
 The Legacy Path: AI replaces the developer to build a static silo.
